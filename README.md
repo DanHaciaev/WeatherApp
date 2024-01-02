@@ -13,3 +13,5 @@ This application is a weather forecast tool built using Vue.js framework. It all
 ### How to Use:
 1. Enter the name of the city you want to check the weather for in the input field.
 2. Click the "Get Weather" button to instantly retrieve the current temperature.
+
+![alt text](./main.jpg)
