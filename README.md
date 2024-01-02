@@ -15,3 +15,4 @@ This application is a weather forecast tool built using Vue.js framework. It all
 2. Click the "Get Weather" button to instantly retrieve the current temperature.
 
 ![alt text](./main.jpg)
+![alt text](./info.jpg)
