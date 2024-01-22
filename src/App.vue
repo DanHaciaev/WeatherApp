@@ -1,10 +1,10 @@
 <template>
   <div className="wrapper">
-    <h1>Погодное приложение</h1>
-    <p>Узнать погоду в {{ city == "" ? "вашем городе" : cityName }}</p>
-    <input type="text" v-model="city" placeholder="Введите город" @keyup.enter="getWeather">
-    <button v-if="city != ''" @click="getWeather()">Получить данные</button>
-    <button disabled v-else>Введите город</button>
+    <h1>Weather App</h1>
+    <p>Find out the weather in {{ city == "" ? "your city" : cityName }}</p>
+    <input type="text" v-model="city" placeholder="Enter city" @keyup.enter="getWeather">
+    <button v-if="city != ''" @click="getWeather()">Get Weather</button>
+    <button disabled v-else>Get Weather</button>
     <p className="error">{{ error }}</p>
     <div v-if="info != null">
       <p>{{ showTemp }}</p>
@@ -33,28 +33,28 @@ export default {
     showTemp() {
       const temperature = Math.round(this.info.main.temp);
       const sign = temperature >= 0 ? '+' : '-';
-      return `Температура: ${sign}${Math.abs(temperature)}°C`;
+      return `Temperature: ${sign}${Math.abs(temperature)}°C`;
     },
     showFeelsLike() {
       const feelsLike = Math.round(this.info.main.feels_like);
       const sign = feelsLike >= 0 ? '+' : '-';
-      return `Ощущается как: ${sign}${Math.abs(feelsLike)}°C`;
+      return `Feels like: ${sign}${Math.abs(feelsLike)}°C`;
     },
     showMinTemp() {
       const minTemp = Math.floor(this.info.main.temp_min);
       const sign = minTemp >= 0 ? '+' : '-';
-      return `Минимальная температура: ${sign}${Math.abs(minTemp)}°C`;
+      return `Minimum temperature: ${sign}${Math.abs(minTemp)}°C`;
     },
     showMaxTemp() {
       const maxTemp = Math.ceil(this.info.main.temp_max);
       const sign = maxTemp >= 0 ? '+' : '-';
-      return `Максимальная температура: ${sign}${Math.abs(maxTemp)}°C`;
+      return `Maximum temperature: ${sign}${Math.abs(maxTemp)}°C`;
     }
   },
   methods: {
     getWeather() {
       if (this.city.trim().length < 2) {
-        this.error = "Нужно название более одного символа"
+        this.error = "Need more than one character name"
         return false;
       }
       this.error = ""
