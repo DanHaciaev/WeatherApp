@@ -10,9 +10,17 @@ This application is a weather forecast tool built using Vue.js framework. It all
 - **Vue.js**: A progressive JavaScript framework used for building the user interface and handling data flow.
 - **Weather API Integration**: Utilizes an external weather API to fetch weather data based on user input.
 
+---
+
 ### How to Use:
 1. Enter the name of the city you want to check the weather for in the input field.
 2. Click the "Get Weather" button to instantly retrieve the current temperature.
 
 ![alt text](./main.jpg)
 ![alt text](./info.jpg)
+
+---
+
+## 🔗 Live Demo
+
+[Click here to try the app](https://weather-app-nine-eta-88.vercel.app/)
